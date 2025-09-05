@@ -31,7 +31,7 @@ pipeline {
             sh  """mvn sonar:sonar \
                     -Dsonar.projectKey=ecommerce-java-webapp \
                     -Dsonar.host.url=http://75.101.251.162:9000 \
-                    -Dsonar.login=e5f2bd65a07c94dbf113b610d258b964a7d7e7b4
+                    -Dsonar.login=e5f2bd65a07c94dbf113b610d258b964a7d7e7b4"""
     stage("Upload Artifact To Nexus"){
         steps{
              sh 'mvn deploy'
